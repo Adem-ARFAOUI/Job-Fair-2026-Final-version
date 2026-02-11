@@ -19,19 +19,19 @@ export const speakers = [
   },
   {
     id: 11,
-    name: "Mr. Ahmed Ben Moulehom",
+    name: "M. Ahmed Ben Moulehom",
     roles: ["DG de la BNA Bank"],
     image: "/images & logos/Ahmed ben Moulehem.png",
   },
   {
     id: 14,
-    name: "Mr. Marouane Ben Slimane",
+    name: "M. Marouane Ben Slimane",
     roles: ["DG de la Poste"],
     image: "/images & logos/Marouane Ben Slimen.png",
   },
   {
     id: 12,
-    name: "Mr. Riadh Hajjaj",
+    name: "M. Riadh Hajjaj",
     roles: ["DG de la ATB Bank"],
     image: "/images & logos/Riadh Hajjaj.png",
   },
