@@ -47,7 +47,7 @@ const Enterprises = () => {
       name: "Zitouna Bank",
       category: "Banque",
       description:
-        "Banque islamique offrant des solutions financières conformes à la charia.",
+        "Banque islamique.",
       website: "https://www.banquezitouna.com",
       logoClass: "logo-zitouna",
     },
