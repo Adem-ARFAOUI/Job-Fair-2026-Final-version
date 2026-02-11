@@ -109,8 +109,16 @@
   color: #6b7280;
 }
 #org {
-  width: 50%;
+  width: 500px;
   margin: auto;
+}
+
+@media (min-width: 1181px) {
+  #asc {
+    justify-self: center;
+    grid-column: 1 / -1;
+    width: 500px;
+  }
 }
 @media (max-width: 810px) {
   .organisateurs-title {
@@ -122,8 +130,9 @@
   .organisateur-card {
     padding: 30px 20px;
   }
-   #org {
+  #org {
     width: 100%;
     margin: auto;
   }
 }
+
