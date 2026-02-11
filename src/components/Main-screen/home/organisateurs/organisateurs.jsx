@@ -62,7 +62,6 @@ const Organisateurs = forwardRef((props, ref) => {
               href={organisateur.website}
               target='_blank'
               className='organisateur-card'
-              id='org'
             >
               <img src={organisateur.logo} alt='logo' id={organisateur.id} />
               <h3>{organisateur.name}</h3>
