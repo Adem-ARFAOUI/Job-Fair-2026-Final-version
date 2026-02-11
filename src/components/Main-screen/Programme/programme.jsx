@@ -1,5 +1,5 @@
 import React from "react";
-import "./Programme.css";
+import "./programme.css";
 import { program } from "./programme-data";
 const Programme = () => {
   return (
