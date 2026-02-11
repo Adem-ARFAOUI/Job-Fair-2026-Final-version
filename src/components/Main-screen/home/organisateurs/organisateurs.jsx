@@ -32,7 +32,7 @@ const Organisateurs = forwardRef((props, ref) => {
 
       <div>
         <h2 className='organisateurs-title'>Partenaires</h2>
-        <p className='organisateurs-subtitle'>Partenaire du Job Fair 2026</p>
+        <p className='organisateurs-subtitle'>Partenaires du Job Fair 2026</p>
         <div className='organisateurs-grid'>
           <a
             href='https://www.facebook.com/4CFSEGT'
