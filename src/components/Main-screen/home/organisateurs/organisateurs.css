@@ -108,7 +108,10 @@
   font-weight: 700;
   color: #6b7280;
 }
-
+#org {
+  width: 50%;
+  margin: auto;
+}
 @media (max-width: 810px) {
   .organisateurs-title {
     font-size: 2rem;
@@ -118,5 +121,9 @@
   }
   .organisateur-card {
     padding: 30px 20px;
+  }
+   #org {
+    width: 100%;
+    margin: auto;
   }
 }
