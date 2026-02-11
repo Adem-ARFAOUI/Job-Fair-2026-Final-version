@@ -42,7 +42,7 @@ const Organisateurs = forwardRef((props, ref) => {
             href='https://www.facebook.com/direction.stagefsegt.1'
             target='_blank'
             className='organisateur-card'
-            style={{ width: "50%", margin: "auto" }}
+            id='org'
           >
             <img src='/images & logos/dds-logo.png' alt='logo' />
             <h3>Direction des Stages</h3>
