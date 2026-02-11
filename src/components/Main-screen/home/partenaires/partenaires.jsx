@@ -1,6 +1,28 @@
 import React, { forwardRef } from "react";
 
 const Partenaires = forwardRef((props, ref) => {
+  const organisateursData = [
+    {
+      name: "Apecialized Arab Women Association",
+      logo: "/images & logos/afas-logo.jpg",
+      website: "https://www.facebook.com/profile.php?id=100072063352431",
+      categorie: "Association",
+    },
+    {
+      name: "Club Ambassadeurs Vesos TN | FSEGT",
+      logo: "/images & logos/sos-logo.png",
+      website:
+        "https://www.instagram.com/clubs.ambassadeurs.sos.village?igsh=YndieGl4dmRsbGgz",
+      categorie: "Association",
+      id: "sos",
+    },
+    {
+      name: "Association tunisienne pour les objectifs de développement durable",
+      logo: "/images & logos/ATODD.png",
+      website: "https://atodd.tn",
+      categorie: "Association",
+    },
+  ];
   const organizersLogos = [
     {
       name: "Nexus",
@@ -38,9 +60,9 @@ const Partenaires = forwardRef((props, ref) => {
       }}
     >
       <div className='organisateurs-container'>
-        <h2 className='organisateurs-title'>Partenaires</h2>
+        <h2 className='organisateurs-title'>Clubs</h2>
         <p className='organisateurs-subtitle'>
-          Les clubs et institutions Partenaires du Job Fair 2026
+          Les clubs praticpentes du Job Fair 2026
         </p>
         <div className='organisateurs-grid'>
           {organizersLogos.map((logo, index) => (
@@ -54,6 +76,25 @@ const Partenaires = forwardRef((props, ref) => {
             >
               <img src={logo.src} alt={logo.name} />
               <span>{logo.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+      <div style={{ marginTop: "100px" }}>
+        <h2 className='organisateurs-title'>Associations</h2>
+        <p className='organisateurs-subtitle'>
+          Associations participant au Job Fair 2026
+        </p>
+        <div className='organisateurs-grid' style={{ marginBottom: "50px" }}>
+          {organisateursData.map((organisateur) => (
+            <a
+              href={organisateur.website}
+              target='_blank'
+              className='organisateur-card'
+            >
+              <img src={organisateur.logo} alt='logo' id={organisateur.id} />
+              <h3>{organisateur.name}</h3>
+              <span>{organisateur.categorie}</span>
             </a>
           ))}
         </div>
