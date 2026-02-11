@@ -102,7 +102,7 @@ const Header = ({
                 Organisateurs
               </li>
               <li onClick={() => scrollToHomeSub("partenaires")}>
-                Partenaires
+                Clubs
               </li>
               <li onClick={() => scrollToHomeSub("sponsors")}>Sponsors</li>
             </ul>
