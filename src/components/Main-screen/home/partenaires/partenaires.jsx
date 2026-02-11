@@ -75,7 +75,7 @@ const Partenaires = forwardRef((props, ref) => {
       <div style={{ marginTop: "100px" }}>
         <h2 className='organisateurs-title'>Associations</h2>
         <p className='organisateurs-subtitle'>
-          Associations participant au Job Fair 2026
+          Associations participantes au Job Fair 2026
         </p>
         <div className='organisateurs-grid' style={{ marginBottom: "100px" }}>
           {organisateursData.map((organisateur) => (
