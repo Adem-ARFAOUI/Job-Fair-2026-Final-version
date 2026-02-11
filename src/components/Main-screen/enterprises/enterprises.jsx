@@ -47,7 +47,7 @@ const Enterprises = () => {
       name: "Zitouna Bank",
       category: "Banque",
       description:
-        "Banque islamique.",
+        "Banque Zitouna est une banque islamique, citoyenne en conformité avec la finance islamique",
       website: "https://www.banquezitouna.com",
       logoClass: "logo-zitouna",
     },
@@ -55,7 +55,7 @@ const Enterprises = () => {
       name: "BH",
       category: "Banque",
       description:
-        "Banque publique tunisienne spécialisée dans le financement de l’habitat et des projets immobiliers.",
+        "BH Bank est un acteur majeur en Tunisie, offrant des solutions financières adaptées aux particuliers et aux entreprises.",
       website: "https://www.bh-bank.tn",
       logoClass: "logo-bh",
     },
@@ -63,7 +63,7 @@ const Enterprises = () => {
       name: "BH Leasing",
       category: "Finance",
       description:
-        "Société de leasing offrant des solutions de financement pour entreprises.",
+        "Société BH Leasing, une société anonyme spécialisée en opérations de leasing.",
       website: "https://www.bhleasing.tn/",
       logoClass: "logo-bh-leasing",
     },
@@ -80,7 +80,7 @@ const Enterprises = () => {
     {
       name: "CDC",
       category: "Finance",
-      description: "Caisse des dépots et consignations.",
+      description: "La Caisse des Dépôts et Consignations est un investisseur public qui soutient le développement économique, social et environnemental.",
       website: "https://www.cdc.tn/fr",
       logoClass: "logo-cdc",
     },
@@ -98,7 +98,7 @@ const Enterprises = () => {
       name: "PwC",
       category: "Audit & Consulting",
       description:
-        "Cabinet mondial d’audit et de conseil aidant les organisations à améliorer leur performance.",
+        "PwC Tunisie, cabinet d'audit international, développe des missions de conseil, d'audit et d'expertise juridique et fiscale.",
       website: "https://tunisie.pwc.fr/fr/",
       logoClass: "logo-pwc",
     },
@@ -150,7 +150,7 @@ const Enterprises = () => {
       name: "TICDCE",
       category: "IT & Digital",
       description:
-        "Centre dédié aux technologies de l’information et à la transformation digitale.",
+        " Le Centre Tunis International de l’Économie Culturelle et numérique.",
       website: "https://www.facebook.com/TICDCE2018?locale=fr_FR",
       logoClass: "logo-ticdce",
     },
@@ -158,7 +158,7 @@ const Enterprises = () => {
       name: "Digital Bundel",
       category: "IT & Digital",
       description:
-        "Entreprise fournissant des solutions digitales pour les entreprises et les startups.",
+        "À la croisée de la technologie et de la créativité, Digital bundle transforme les idées en réalités digitales.",
       website: "https://digitalbundle.tn/",
       logoClass: "logo-db",
     },
@@ -223,7 +223,7 @@ const Enterprises = () => {
       name: "PGS International",
       category: "Industrie",
       description:
-        "Entreprise industrielle spécialisée dans l’automatisation et les solutions pour l’énergie.",
+        "PGS propose solutions d'automatisation pour le pétrole et le gaz, industries pétrochimiques et électriques et énergétiques.",
       website: "https://pgsintl.com/",
       logoClass: "logo-pgs",
     },
@@ -262,7 +262,7 @@ const Enterprises = () => {
       name: "MAE Assurance",
       category: "Assurance",
       description:
-        "MAE Assurance propose une large gamme de solutions pour protéger les particuliers, les professionnels et les associations.",
+        "MAE offre Des Solutions d'Assurance Personnalisées pour Tous les Besoins.",
       website: "https://www.mae.tn/",
       logoClass: "logo-mae",
     },
