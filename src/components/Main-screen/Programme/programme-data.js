@@ -55,16 +55,12 @@ export const program = [
     time: "10h00 - 10h15",
     type: "highlight",
     title: "Signature des conventions",
-    description:
-      "Signature officielle des conventions de partenariat entre l’université et les institutions partenaires.",
   },
 
   {
     time: "10h15 - 10h30",
     type: "break",
     title: "Pause-café & réseautage",
-    description:
-      "Moment d’échange informel entre étudiants, alumni et professionnels.",
   },
 
   {
@@ -153,7 +149,6 @@ export const program = [
     time: "13h00 - 13h30",
     type: "break",
     title: "Pause déjeuner",
-    description: "Déjeuner et networking entre participants.",
   },
 
   {
