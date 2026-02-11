@@ -11,7 +11,7 @@ const Organisateurs = forwardRef((props, ref) => {
       className='organisateurs'
       id='organisateurs'
       ref={ref}
-      style={{ padding: "100px 20px" }}
+      style={{ padding: "100px 0px 20px 20px" }}
     >
       <div>
         <h2 className='organisateurs-title'>Organisateur</h2>
@@ -33,7 +33,7 @@ const Organisateurs = forwardRef((props, ref) => {
       <div>
         <h2 className='organisateurs-title'>Partenaire</h2>
         <p className='organisateurs-subtitle'>Partenaire du Job Fair 2026</p>
-        <div className='organisateurs-grid' style={{ marginBottom: "50px" }}>
+        <div className='organisateurs-grid'>
           <a
             href='https://www.facebook.com/4CFSEGT'
             target='_blank'
@@ -41,8 +41,7 @@ const Organisateurs = forwardRef((props, ref) => {
             id='org'
           >
             <img src='/images & logos/4c.jpg' alt='logo' />
-            <h3>Direction des Stages</h3>
-            <span>Organisateur</span>
+            <span>4C</span>
           </a>
         </div>
       </div>
