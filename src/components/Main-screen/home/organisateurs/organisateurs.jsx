@@ -6,12 +6,6 @@ import "./organisateurs.css";
 const Organisateurs = forwardRef((props, ref) => {
   const organisateursData = [
     {
-      name: "Direction des Stages",
-      logo: "/images & logos/dds-logo.png",
-      website: "https://www.facebook.com/direction.stagefsegt.1",
-      categorie: "Organisateur",
-    },
-    {
       name: "Apecialized Arab Women Association",
       logo: "/images & logos/afas-logo.jpg",
       website: "https://www.facebook.com/profile.php?id=100072063352431",
@@ -41,9 +35,26 @@ const Organisateurs = forwardRef((props, ref) => {
       style={{ padding: "100px 20px" }}
     >
       <div>
-        <h2 className='organisateurs-title'>Organisateur & Associations</h2>
+        <h2 className='organisateurs-title'>Organisateur</h2>
+        <p className='organisateurs-subtitle'>Organisateur du Job Fair 2026</p>
+        <div className='organisateurs-grid' style={{ marginBottom: "50px" }}>
+          <a
+            href='https://www.facebook.com/direction.stagefsegt.1'
+            target='_blank'
+            className='organisateur-card'
+            style={{ width: "50%", margin: "auto" }}
+          >
+            <img src='/images & logos/dds-logo.png' alt='logo' />
+            <h3>Direction des Stages</h3>
+            <span>Organisateur</span>
+          </a>
+        </div>
+      </div>
+
+      <div style={{ marginTop: "100px" }}>
+        <h2 className='organisateurs-title'>Associations</h2>
         <p className='organisateurs-subtitle'>
-          Organisateur et Associations participant au Job Fair 2026
+          Associations participant au Job Fair 2026
         </p>
         <div className='organisateurs-grid' style={{ marginBottom: "50px" }}>
           {organisateursData.map((organisateur) => (
