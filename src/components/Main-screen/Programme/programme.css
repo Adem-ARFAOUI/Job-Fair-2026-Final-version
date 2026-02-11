@@ -1,0 +1,202 @@
+/* =========================
+   CONTAINER GLOBAL
+========================= */
+.jobfair-container {
+  min-height: 100vh;
+  background: #5e7378;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  padding-bottom: 60px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.jobfair-header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.jobfair-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.jobfair-header p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 20px;
+  color: #cfd8ff;
+}
+
+/* =========================
+   PROGRAM SECTION
+========================= */
+.program-section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* =========================
+   SESSION BLOCK
+========================= */
+.session {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(12px);
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.session:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Session types (optionnel mais pro) */
+.session.welcome {
+  border-left: 5px solid #4fc3f7;
+}
+
+.session.opening {
+  border-left: 5px solid #81c784;
+}
+
+.session.keynote {
+  border-left: 5px solid #ffb74d;
+}
+
+.session.masterclass {
+  border-left: 5px solid #ba68c8;
+}
+
+.session.conference {
+  border-left: 5px solid #64b5f6;
+}
+
+/* =========================
+   SESSION TIME
+========================= */
+.session-time {
+  font-weight: 600;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+/* =========================
+   SESSION CONTENT
+========================= */
+.session-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+/* =========================
+   SPEAKER CARD
+========================= */
+.speaker-card {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  transition: background 0.3s ease;
+}
+
+.speaker-card:last-child {
+  margin-bottom: 0;
+}
+
+.speaker-card:hover {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Header speaker */
+.speaker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.speaker-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Duration badge */
+.duration {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 20px;
+  opacity: 0.9;
+}
+
+/* Role & organisation */
+.speaker-role {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+/* Description */
+.speaker-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+}
+/* =========================
+   SESSIONS SANS SPEAKERS
+========================= */
+.session.logistics {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+.session.break {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.session.highlight {
+  background: linear-gradient(135deg, #f9b233, #f5a623);
+  color: #1b1b1b;
+}
+
+.session.closing {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.session-description p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .jobfair-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .session {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .session-time {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,159 @@
+/* =========================
+   HERO SECTION
+========================= */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* =========================
+   VIDEO BACKGROUND
+========================= */
+.home-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.home-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.7),
+    rgba(2, 6, 23, 0.85)
+  );
+  z-index: 2;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.home-content {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* =========================
+   TITLE
+========================= */
+.home-title {
+  font-size: 64px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  max-width: 1100px;
+}
+
+.home-title span {
+  color: #facc15;
+  text-shadow: 0 0 30px rgba(250, 204, 21, 0.6);
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+.home-subtitle {
+  margin-top: 25px;
+  font-size: 22px;
+  opacity: 0.9;
+}
+
+/* =========================
+   ACTION BUTTON
+========================= */
+.home-actions {
+  margin-top: 40px;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 40px;
+  background: #facc15;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+
+  box-shadow: 0 10px 30px rgba(250, 204, 21, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(250, 204, 21, 0.6);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .home-title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 38px;
+  }
+
+  .home-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    height: 90vh;
+  }
+
+  .home-title {
+    font-size: 28px;
+  }
+
+  .home-subtitle {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    padding: 12px 26px;
+    font-size: 14px;
+  }
+}

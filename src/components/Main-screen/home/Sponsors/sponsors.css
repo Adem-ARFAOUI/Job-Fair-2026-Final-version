@@ -1,0 +1,20 @@
+.sponsors-title {
+  font-size: 3rem;
+  color: #284d9e;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.sponsors-grid img {
+  width: 75%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;;
+}
+@media (max-width: 768px) {
+  .sponsors-title {
+    font-size: 2rem;
+  }
+}

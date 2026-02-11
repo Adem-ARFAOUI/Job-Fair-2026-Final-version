@@ -1,0 +1,122 @@
+/* =========================
+   SECTION
+========================= */
+.organisateurs {
+  padding: 100px 30px;
+  background: linear-gradient(180deg, #ffffff, #f3f4f6);
+}
+
+.organisateurs-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+.organisateurs-title {
+  font-size: 3rem;
+  color: #284d9e;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.organisateurs-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+/* =========================
+   GRID
+========================= */
+.organisateurs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  margin: auto;
+}
+
+/* =========================
+   CARD
+========================= */
+.organisateur-card {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 18px;
+  text-decoration: none;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* Glow overlay */
+.organisateur-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgb(40, 77, 158, 0.5),
+    rgb(250, 204, 21, 0.7)
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* Hover effect */
+.organisateur-card:hover {
+  transform: translateY(-12px) scale(1.06);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+}
+
+.organisateur-card:hover::before {
+  opacity: 1;
+}
+
+/* =========================
+   LOGO
+========================= */
+.organisateur-card img {
+  height: 170px;
+  width: 170px;
+  transition: transform 0.35s ease;
+}
+.organisateur-card #sos {
+  width: 280px;
+  margin: auto;
+}
+.organisateur-card:hover img {
+  transform: scale(1.1);
+}
+.organisateur-card h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #284d9e;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.organisateur-card span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+@media (max-width: 810px) {
+  .organisateurs-title {
+    font-size: 2rem;
+  }
+  .organisateurs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .organisateur-card {
+    padding: 30px 20px;
+  }
+}

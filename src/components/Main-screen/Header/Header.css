@@ -1,0 +1,347 @@
+/* =========================
+   HEADER BASE
+========================= */
+
+.header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: none;
+  z-index: 2000;
+}
+
+/* =========================
+   TITLE (LEFT)
+========================= */
+.header-title {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.header-title div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-title h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+  color: rgb(40, 77, 158);
+}
+
+.header-title span {
+  font-size: 15px;
+  color: #facc15;
+  font-weight: 600;
+}
+.header-title .job-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  background-color: rgb(40, 77, 158);
+  padding: 10px;
+}
+/* =========================
+   NAVIGATION (CENTER)
+========================= */
+.nav {
+  position: fixed;
+  top: 10px;
+  left: 35%;
+  z-index: 2001;
+}
+.nav .ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 8px 22px;
+  border-radius: 12px;
+  background: rgb(40, 77, 158);
+  box-shadow: 0 5px 25px;
+  transition: transform 0.4s ease;
+}
+.nav li {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.nav li:hover {
+  color: rgb(40, 77, 158);
+  background: #facc15;
+}
+.nav li {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Dropdown général */
+.dropdown {
+  position: absolute;
+  top: 45px;
+  left: -20px;
+  background: rgb(40, 77, 158);
+  color: #fff;
+  list-style: none;
+  padding: 5px 5px;
+  border-radius: 6px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Liens du dropdown */
+.dropdown li {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.dropdown li:hover {
+  background: #facc15;
+  color: rgb(40, 77, 158);
+}
+
+/* Desktop > 960px : afficher seulement au hover sur li.parent */
+@media (min-width: 961px) {
+  .nav li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nav li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 20px;
+  height: 3px;
+  background: #facc15;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.header-logos {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.header-logos img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
+  margin-left: -10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.home-arrow {
+  cursor: pointer;
+  margin-left: 4px;
+}
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+.scroll-up {
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  background: #facc15;
+  color: rgb(40, 77, 158);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-up:hover {
+  transform: scale(1.15);
+}
+
+/* =========================
+   HAMBURGER MENU
+========================= */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: rgb(40, 77, 158);
+}
+.home-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.home-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotation quand dropdown ouvert */
+.home-arrow.open {
+  transform: rotate(180deg);
+}
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 960px) {
+  .menu-toggle {
+    display: block;
+    z-index: 3000;
+  }
+  .home-item {
+    transition: margin-bottom 0.35s ease;
+  }
+  .home-item.dropdown-open {
+    margin-bottom: 200px;
+    transition: margin-bottom 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .dropdown {
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #facc15;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+  }
+  .dropdown.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+  .home-arrow {
+    font-size: 14px;
+  }
+  .dropdown li {
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: #fff;
+    background-color: rgb(40, 77, 158);
+    animation: fadeRight 1s ease forwards;
+  }
+  .header {
+    padding: 0 20px 0 0;
+  }
+
+  .header-logos {
+    position: fixed;
+    right: 50px;
+  }
+  .header-logos img {
+    width: 70px;
+    height: 70px;
+  }
+  .nav {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 70%;
+    transform: translateX(100%); /* caché */
+    transition: transform 0.4s ease;
+    z-index: 2500;
+  }
+  .nav.open {
+    transform: translateX(-8%);
+  }
+  .nav .ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    animation: fadeRight 1s ease forwards;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(3, 3, 0, 0.3);
+  }
+  .nav li {
+    width: 100%;
+  }
+  @keyframes fadeRight {
+    from {
+      opacity: 0;
+      transform: translateX(40%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideDown {
+  }
+  .nav li {
+    justify-content: center;
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   SMALL DEVICES
+========================= */
+@media (max-width: 555px) {
+  .header-title h1 {
+    font-size: 25px;
+  }
+  .header-title span {
+    font-size: 15px;
+  }
+  .header-logos {
+    display: none;
+  }
+  .header-title {
+    gap: 10px;
+  }
+}
+@media (max-width: 390px) {
+  .nav li {
+    width: 100%;
+  }
+}
+@media (max-width: 360px) {
+  .nav li {
+    width: 100%;
+  }
+}

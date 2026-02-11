@@ -1,0 +1,347 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --primary: #284d9e;
+  --secondary: #ebd513;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --card-bg: #ffffff;
+  --radius: 20px;
+  --shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.enterprises {
+  padding: 100px 20px;
+  background: #597177;
+}
+
+.enterprises-wrapper {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.enterprises-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.enterprises-header h2 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.enterprises-header p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #cfd8ff;
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+.enterprise-filter {
+  margin-top: 25px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.enterprise-filter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+.enterprises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 35px;
+  margin-top: 60px;
+}
+.enterprise-card {
+  background: linear-gradient(180deg, #ffffff, #f9fafb);
+  border-radius: var(--radius);
+  padding: 35px 25px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.35s ease;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: reveal 0.8s ease forwards;
+}
+
+/* Shine overlay */
+.enterprise-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.enterprise-card:hover::before {
+  opacity: 1;
+}
+
+.enterprise-card:hover {
+  transform: translateY(-14px) scale(1.05);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.22);
+}
+
+.enterprise-card:active {
+  transform: scale(1.08);
+}
+
+.enterprise-logo {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.enterprise-logo div {
+  width: 140px;
+  height: 80px;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.4s ease;
+}
+.enterprise-logo #img {
+  height: 150px;
+  width: 170px;
+  border-radius: 15px;
+}
+.enterprise-card:hover .enterprise-logo div {
+  transform: scale(1.1);
+}
+
+/* =========================
+   TEXT
+========================= */
+.enterprise-card h3 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin: 18px 0 12px;
+  transition: color 0.3s ease;
+}
+
+.enterprise-card p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  min-height: 70px;
+  transition: color 0.3s ease;
+}
+
+/* =========================
+   CATEGORY BADGE
+========================= */
+.enterprise-category {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 7px 18px;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.cat-banque:hover {
+  background: linear-gradient(135deg, rgba(40, 77, 158, 0.478), #ffffff);
+}
+
+.cat-finance:hover {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.478), #ffffff);
+}
+
+.cat-assurance:hover {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.478), #ffffff);
+}
+
+.cat-audit-and-consulting:hover {
+  background: linear-gradient(135deg, rgba(147, 51, 234, 0.478), #ffffff);
+}
+
+.cat-it-and-digital:hover {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.478), #ffffff);
+}
+
+.cat-télécommunications:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.478), #ffffff);
+}
+
+.cat-industrie:hover {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.478), #ffffff);
+}
+
+.cat-services:hover {
+  background: linear-gradient(135deg, rgba(107, 114, 128, 0.478), #ffffff);
+}
+
+.cat-formation:hover {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.478), #ffffff);
+}
+
+.cat-association:hover {
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.478), #ffffff);
+}
+.cat-online-shop:hover {
+  background: linear-gradient(135deg, rgba(58, 255, 3, 0.478), #ffffff);
+}
+
+/* Badge color on hover */
+.enterprise-card:hover .enterprise-category {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .enterprises-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .enterprise-card {
+    padding: 30px 20px;
+  }
+}
+.logo-bna {
+  background-image: url("/Logos des entreprises/BNA bank.jpg");
+}
+.logo-atb {
+  background-image: url("/Logos des entreprises/ATB bank.jpg");
+}
+.logo-stb {
+  background-image: url("/Logos des entreprises/STB\ Bank.png");
+}
+.logo-attijari {
+  background-image: url("/Logos des entreprises/Attijari\ bank.png");
+}
+.logo-uib {
+  background-image: url("/Logos des entreprises/UIB.png");
+}
+.logo-zitouna {
+  background-image: url("/Logos des entreprises/Zitouna\ bank.png");
+}
+.logo-bh-leasing {
+  background-image: url("/Logos des entreprises/BH\ Leasing.png");
+}
+.logo-endatoa {
+  background-image: url("/Logos des entreprises/Enda Tao.png");
+}
+.logo-cdc {
+  background-image: url("/Logos des entreprises/CDC.jpg");
+}
+.logo-kpmg {
+  background-image: url("/Logos des entreprises/KPMG.png");
+}
+.logo-pwc {
+  background-image: url("/Logos des entreprises/PwC transparent.png");
+}
+
+.logo-medianet {
+  background-image: url("/Logos des entreprises/Medianet.png");
+}
+.logo-telecom {
+  background-image: url("/Logos des entreprises/Telecom.jpg");
+}
+.logo-wse {
+  background-image: url("/Logos des entreprises/Wall\ street\ english.jpg");
+}
+.logo-bh {
+  background-image: url("/Logos des entreprises/BH\ bank.png");
+}
+.logo-auto-sans-risque {
+  background-image: url("/Logos des entreprises/Auto\ Sans\ Risque.png");
+}
+.logo-iris {
+  background-image: url("/Logos des entreprises/IRYS\ assurance.png");
+}
+.logo-cmg {
+  background-image: url("/Logos des entreprises/Consulting Management and Governance.jpg");
+}
+.logo-ams {
+  background-image: url("/Logos des entreprises/Audit and Management skills.jpg");
+}
+.logo-db {
+  background-image: url("/Logos des entreprises/Digital Bundle.png");
+}
+.logo-asie {
+  background-image: url("/Logos des entreprises/AISE.png");
+}
+.logo-ticdce {
+  background-image: url("/Logos des entreprises/TICDCE.png");
+}
+.logo-atodd {
+  background-image: url("/Logos des entreprises/ATODD.png");
+}
+.logo-wimbee {
+  background-image: url("/Logos des entreprises/Wimbee.jpg");
+}
+.logo-becooder {
+  background-image: url("/Logos des entreprises/Bee\ Coders.png");
+}
+.logo-didon-data {
+  background-image: url("/Logos des entreprises/DiDonData.png");
+}
+.logo-glugo {
+  background-image: url("/Logos des entreprises/GluGoConnect.png");
+}
+.logo-telep {
+  background-image: url("/Logos des entreprises/Teleperformance.png");
+}
+.logo-tgs {
+  background-image: url("/Logos des entreprises/TGS\ CWG.png");
+}
+
+.logo-nespresso {
+  background-image: url("/Logos des entreprises/Nespresso.png");
+}
+.logo-pgs {
+  background-image: url("/Logos des entreprises/PGS\ International.jpg");
+}
+.logo-poste {
+  background-image: url("/Logos des entreprises/Poste\ Tunisienne.jpg");
+}
+.logo-afas {
+  background-image: url("/Logos des entreprises/afas-logo.jpg");
+}
+.logo-lbm {
+  background-image: url("/Logos des entreprises/Logo LBM.png");
+}
+.logo-mae {
+  background-image: url("/Logos des entreprises/MAE.png");
+}
+.logo-trah {
+  background-image: url("/Logos des entreprises/trah.png");
+}
