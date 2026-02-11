@@ -35,11 +35,6 @@ const Partenaires = forwardRef((props, ref) => {
       link: "https://www.instagram.com/enac.fsegt/?fbclid=IwY2xjawPt3UBleHRuA2FlbQIxMABicmlkETFwdzJLNW9rWGRMOW4zWTBNc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhWiFuu6_3qDDw4Laen-M_YyMQFpzjm6CreEAUzwj7dHcNJZDbIidv_qZvPr_aem_TAWJdZRaISw8VUmoabESwA",
     },
     {
-      name: "4C",
-      src: "/images & logos/4c.jpg",
-      link: "https://www.facebook.com/4CFSEGT",
-    },
-    {
       name: "JCI",
       src: "/images & logos/jci-logo.png",
       link: "https://www.facebook.com/JcietudiantsFSEGT",
