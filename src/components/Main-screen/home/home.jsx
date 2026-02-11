@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./home.css";
 import Organisateurs from "./organisateurs/organisateurs";
 import Sponsors from "./Sponsors/sponsors";
-import Partenaires from "./Partenaires/partenaires";
+import Partenaires from "./partenaires/partenaires.jsx";
 
 const Home = ({ homeRefs, homeTarget, videoSrc, setActiveSection }) => {
   useEffect(() => {
